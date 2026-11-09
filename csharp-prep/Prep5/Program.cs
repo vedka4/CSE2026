@@ -48,7 +48,7 @@ class Program
         {
             int currentAge = DateTime.Now.Year - year;
             Console.WriteLine($"Brother {name}, the square of your number is: {squaredNumber}");
-            Console.Write($"Brother {name}, you will turn {currentAge} this year");
+            Console.Write($"Brother {name}, you will turn {currentAge} this year.");
             
             return currentAge;
         }
