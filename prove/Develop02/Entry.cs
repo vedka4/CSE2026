@@ -8,6 +8,7 @@ public class Entry
 
     public void DisplayEntry()
     {
-        
+        Console.WriteLine($"Date: {_date} - Prompt: {_question}");
+        Console.WriteLine($"Your Answer: {_userAnswer}");
     }
 }
