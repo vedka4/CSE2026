@@ -15,6 +15,7 @@ public class Journal
         foreach (Entry entry in _entries)
         {
             entry.DisplayEntry();
+            Console.WriteLine();
         }
     }
 
