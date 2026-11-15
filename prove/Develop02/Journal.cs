@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class Journal
 {
@@ -21,7 +22,13 @@ public class Journal
 
     public void SaveToFile(string fileName)
     {
-        
+        using (StreamWriter outputFile = new StreamWriter(fileName))
+        {
+            foreach (Entry entry in _entries)
+            {
+                outputFile.WriteLine($"{entry._date}|{entry._question}|{entry._userAnswer}");
+            }
+        }
     }
 
     public void LoadFromFile(string fileName)

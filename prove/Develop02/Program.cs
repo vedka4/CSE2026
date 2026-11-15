@@ -43,7 +43,9 @@ class Program
             }
             else if (optionNumber == 4)
             {
-                Console.WriteLine("Last answer");
+                Console.Write("What is the filename? ");
+                string fileName = Console.ReadLine();
+                journal.SaveToFile(fileName);
             }
             else if (optionNumber == 5)
             {
