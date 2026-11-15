@@ -25,17 +25,21 @@ class Program
             {
                 string promptRequest = questionGenerator.RandomQuestion();
                 Console.WriteLine(promptRequest);
-                Console.Write(" ");
-                Console.ReadLine();
-                
+                Console.Write("> ");
+                string userInput = Console.ReadLine();
+                Entry newEntry = new Entry();
+                newEntry._userAnswer = userInput;
+                newEntry._question = promptRequest;
+                newEntry._date = DateTime.Now.ToShortDateString();
+                journal.AddEntry(newEntry);
             }
             else if (optionNumber == 2)
             {
-                Console.WriteLine("Fantastic");
+                journal.DisplayAll();
             }
             else if (optionNumber == 3)
             {
-                Console.WriteLine("Incredable");
+                
             }
             else if (optionNumber == 4)
             {
