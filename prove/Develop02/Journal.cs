@@ -7,19 +7,22 @@ public class Journal
 
     public void AddEntry(Entry newEntry)
     {
-        
+        _entries.Add(newEntry);
     }
 
     public void DisplayAll()
     {
-        
+        foreach (Entry entry in _entries)
+        {
+            entry.DisplayEntry();
+        }
     }
 
     public void SaveToFile(string fileName)
     {
         
     }
-    
+
     public void LoadFromFile(string fileName)
     {
         
