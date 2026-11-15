@@ -1,5 +1,11 @@
 using System;
 using System.Runtime.CompilerServices;
+/*
+   Exceeding requirements:
+   Before loading a journal, the program checks if the file exists.
+   If the user types a wrong file name, it shows a friendly message
+   instead of crashing, and the current entries are not lost.
+*/
 
 class Program
 {
@@ -41,9 +47,15 @@ class Program
             {               
                 Console.Write("What is the filename? ");
                 string fileName = Console.ReadLine();
-                if(File.Exists(fileName)){Console.WriteLine("The file doesn;t exist, please try agin");}
-                journal.LoadFromFile(fileName);
-                
+                if (File.Exists(fileName))
+                {
+                    journal.LoadFromFile(fileName);
+                }
+                else
+                {
+                    Console.WriteLine("The file doesn't exist, please try again.");
+                }
+                              
             }
             else if (optionNumber == 4)
             {
