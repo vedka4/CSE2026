@@ -25,6 +25,9 @@ class Program
             {
                 string promptRequest = questionGenerator.RandomQuestion();
                 Console.WriteLine(promptRequest);
+                Console.Write(" ");
+                Console.ReadLine();
+                
             }
             else if (optionNumber == 2)
             {
