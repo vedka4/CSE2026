@@ -33,6 +33,20 @@ public class Journal
 
     public void LoadFromFile(string fileName)
     {
-        
+         _entries.Clear();
+
+        string[] lines = File.ReadAllLines(fileName);
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split("|");
+
+            Entry newEntry = new Entry();
+            newEntry._date = parts[0];
+            newEntry._question = parts[1];
+            newEntry._userAnswer = parts[2];
+
+            _entries.Add(newEntry);
+        }
     }
 }

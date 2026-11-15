@@ -38,8 +38,10 @@ class Program
                 journal.DisplayAll();
             }
             else if (optionNumber == 3)
-            {
-                
+            {               
+                Console.Write("What is the filename? ");
+                string fileName = Console.ReadLine();
+                journal.LoadFromFile(fileName);
             }
             else if (optionNumber == 4)
             {
