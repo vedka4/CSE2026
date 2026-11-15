@@ -23,7 +23,8 @@ class Program
 
             if (optionNumber == 1)
             {
-                Console.WriteLine("Good");
+                string promptRequest = questionGenerator.RandomQuestion();
+                Console.WriteLine(promptRequest);
             }
             else if (optionNumber == 2)
             {
