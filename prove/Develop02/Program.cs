@@ -41,7 +41,9 @@ class Program
             {               
                 Console.Write("What is the filename? ");
                 string fileName = Console.ReadLine();
+                if(File.Exists(fileName)){Console.WriteLine("The file doesn;t exist, please try agin");}
                 journal.LoadFromFile(fileName);
+                
             }
             else if (optionNumber == 4)
             {
