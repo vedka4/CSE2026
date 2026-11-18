@@ -23,14 +23,12 @@ class Program
         int counter = 1;
         while (counter <= 20)
         {
-
-            int topNumber= randomNumber.Next(1, 10);
-            int bottomNumber = randomNumber.Next(1,10);
+            int topNumber = randomNumber.Next(1, 10);
+            int bottomNumber = randomNumber.Next(1, 10);
             randomFraction.SetTop(topNumber);
             randomFraction.SetBottom(bottomNumber);
             Console.WriteLine($"Fraction {counter}: string: {randomFraction.GetFractionString()} Number: {randomFraction.GetDecimalValue()}");
             counter++;
-
         }       
     }
 } 
