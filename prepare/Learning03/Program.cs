@@ -14,5 +14,7 @@ class Program
         int topRequested = fraction3.GetTop();
         int bottomRequested = fraction3.GetBottom();
         Console.WriteLine($"{topRequested}/{bottomRequested}");
+
+        
     }
 }
