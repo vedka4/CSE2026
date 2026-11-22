@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Diagnostics.Metrics;
 using System.Runtime.CompilerServices;
 
@@ -52,6 +53,17 @@ public class Scripture
         }
 
         return true;
+    }
+
+    public void ShowAllWords()
+    {
+        foreach (Word word in _words)
+        {
+            if (word.IsHidden() == true)
+            {
+                word.Show();
+            }
+        }
     }
 
 }
