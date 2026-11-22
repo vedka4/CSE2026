@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -22,9 +23,17 @@ class Program
             }
             else
             {
-                scripture.HideRandomWords();
+                scripture.HideRandomWords();  
             }
         }
+
+        if (scripture.IsCompletelyHidden())
+            {
+                scripture.ShowAllWords();
+                Console.Clear();
+                Console.WriteLine("Here is the full scripture so you can check your memory:");
+                Console.WriteLine(scripture.GetDisplayText());
+            }
     }
 
 } 
