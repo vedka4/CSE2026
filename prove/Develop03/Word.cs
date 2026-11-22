@@ -24,6 +24,11 @@ public class Word
         _isHidden = true;
     }
 
+    public void Show()
+    {
+        _isHidden = false;
+    }
+
     public string DisplayText()
     {
         if (_isHidden == false)
