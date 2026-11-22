@@ -6,9 +6,25 @@ class Program
     {
         Reference reference = new Reference("Proverbios", 3, 5, 6);
         Scripture scripture = new Scripture(reference, "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths");
-        Console.Clear();
-        Console.WriteLine(scripture.GetDisplayText());
-        
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine(scripture.GetDisplayText());
+            if(scripture.IsCompletelyHidden())
+            {
+                break;
+            }
+            Console.WriteLine("Press enter to continue or type 'quit' to finish:");
+            string input = Console.ReadLine();
+            if (input == "quit")
+            {
+                break;
+            }
+            else
+            {
+                scripture.HideRandomWords();
+            }
+        }
     }
 
 } 
