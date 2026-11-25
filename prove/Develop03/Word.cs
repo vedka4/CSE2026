@@ -17,7 +17,6 @@ public class Word
 {
     private string _scriptureWord;
     private bool _isHidden;
-
     public Word(string text)
     {
         _scriptureWord = text;
